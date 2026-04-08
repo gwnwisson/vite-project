@@ -19,3 +19,5 @@ jobs:
         run: docker build -t gwensws/vite-project .
       - name: push
         run: docker push gwensws/vite-project
+      - name: ping render
+        run: curl ${{ secrets.RENDER_PING_URL }}
